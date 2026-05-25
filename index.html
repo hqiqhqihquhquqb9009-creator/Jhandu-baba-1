@@ -10,10 +10,10 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="Anand & Serra">
 
-    <meta property="og:title" content="Babaji Jhandu Bomb v6.3 - Friend Roast Tool 💣">
+    <meta property="og:title" content="Babaji Jhandu Bomb v6.3 - Friend Roast Tool">
     <meta property="og:description" content="Apne dosto ka naam dalo aur unka khatarnak system hang karne wala roast generate karo!">
     <meta property="og:type" content="website">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💣</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -22,35 +22,35 @@
             color: #fff;
             min-height: 100vh;
         }
-   .input-screen {
-            padding: 20px;
+.input-screen {
+            padding: 15px;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding-top: 40px;
+            padding-top: 20px;
             min-height: 100vh;
         }
-   .container {
+.container {
             width: 100%;
             max-width: 650px;
             background: rgba(30, 41, 59, 0.6);
             backdrop-filter: blur(12px);
             border: 1px solid #334155;
             border-radius: 16px;
-            padding: 30px;
+            padding: 25px 20px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.4);
         }
-   .header {
+.header {
             display: flex;
             align-items: center;
             gap: 10px;
             margin-bottom: 20px;
         }
-   .header h1 {
-            font-size: 24px;
+.header h1 {
+            font-size: 22px;
             font-weight: 600;
         }
-   .subtitle {
+.subtitle {
             color: #94a3b8;
             margin-bottom: 25px;
             font-size: 15px;
@@ -65,7 +65,7 @@
         }
         input[type="text"] {
             width: 100%;
-            padding: 14px;
+            padding: 16px;
             background: rgba(15, 23, 42, 0.8);
             border: 1px solid #475569;
             border-radius: 10px;
@@ -79,30 +79,32 @@
             box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
         }
 
-    /* BABAJI WIDE MCQ CSS 💣 */
-   .mcq-container {
+    /* BABAJI WIDE MCQ CSS - AB BOX BADA HAI  */
+.mcq-container {
             background: rgba(15, 23, 42, 0.4);
             border: 1px solid #334155;
             border-radius: 12px;
-            padding: 20px;
+            padding: 22px 18px;
             margin-bottom: 25px;
             position: relative;
+            width: 100%;
         }
-   .question-header {
+.question-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             gap: 15px;
         }
-   .question-text {
-            font-size: 17px;
+.question-text {
+            font-size: 18px;
             color: #f8fafc;
             font-weight: 700;
             flex: 1;
-            line-height: 1.5;
+            line-height: 1.6;
+            word-break: break-word;
         }
-   .change-btn {
+.change-btn {
             background: rgba(139, 92, 246, 0.2);
             border: 1px solid #8b5cf6;
             color: #a78bfa;
@@ -114,53 +116,74 @@
             white-space: nowrap;
             font-weight: 600;
         }
-   .change-btn:hover {
+.change-btn:hover {
             background: #8b5cf6;
             color: white;
             transform: scale(1.05);
         }
-   .options-list {
+.options-list {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
+            width: 100%;
         }
-   .option-item {
+.option-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             background: rgba(30, 41, 59, 0.9);
             border: 1px solid #475569;
-            border-radius: 10px;
-            padding: 15px;
+            border-radius: 12px;
+            padding: 18px 15px;
             cursor: pointer;
             transition: all 0.2s ease;
+            width: 100%;
         }
-   .option-item:hover {
+.option-item:hover {
             border-color: #a78bfa;
             background: rgba(139, 92, 246, 0.15);
             transform: translateX(5px);
         }
-   .option-item input[type="radio"] {
+.option-item input[type="radio"] {
             margin-right: 15px;
+            margin-top: 3px;
             accent-color: #8b5cf6;
-            transform: scale(1.3);
+            transform: scale(1.4);
             cursor: pointer;
+            flex-shrink: 0;
         }
-   .option-label {
+.option-label {
             cursor: pointer;
-            font-size: 15px;
+            font-size: 17px;
             color: #e2e8f0;
             width: 100%;
-            line-height: 1.4;
+            line-height: 1.6;
+            word-break: break-word;
         }
 
-   .buttons {
+        /* CUSTOM TEXT INPUT KA CSS  */
+.custom-input-box {
+            display: none;
+            width: 100%;
+            margin-top: 12px;
+            padding: 16px;
+            background: rgba(15, 23, 42, 0.9);
+            border: 2px solid #8b5cf6;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+        }
+.option-item:has(input:checked) +.custom-input-box {
+            display: block;
+        }
+
+.buttons {
             display: flex;
             gap: 12px;
             margin-top: 30px;
         }
         button {
             flex: 1;
-            padding: 14px;
+            padding: 16px;
             border: none;
             border-radius: 10px;
             font-size: 16px;
@@ -168,77 +191,79 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-   .generate {
+.generate {
             background: linear-gradient(135deg, #a78bfa, #8b5cf6);
             color: white;
         }
-   .generate:hover {
+.generate:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
         }
-   .reset {
+.reset {
             background: rgba(51, 65, 85, 0.8);
             color: #e2e8f0;
             border: 1px solid #475569;
         }
-   .result-screen {
+.result-screen {
             display: none;
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 30px 15px;
             animation: slideIn 0.4s ease-out;
         }
         @keyframes slideIn {
             from { opacity: 0; transform: translateX(50px); }
             to { opacity: 1; transform: translateX(0); }
         }
-   .result-container {
+.result-container {
             max-width: 900px;
             margin: 0 auto;
             text-align: center;
         }
-   .mood-big {
-            font-size: 120px;
+.mood-big {
+            font-size: 100px;
             line-height: 1;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             animation: bounce 0.6s;
         }
         @keyframes bounce {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.2); }
         }
-   .mood-text-big {
-            font-size: 42px;
+.mood-text-big {
+            font-size: 36px;
             font-weight: 900;
             margin-bottom: 10px;
             color: #fbbf24;
             text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
         }
-   .mood-desc-big {
-            font-size: 18px;
+.mood-desc-big {
+            font-size: 17px;
             color: #94a3b8;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-style: italic;
+            padding: 0 10px;
         }
-   .roast-full {
+.roast-full {
             background: rgba(15, 23, 42, 0.8);
             border: 2px solid #8b5cf6;
             border-radius: 20px;
-            padding: 40px 30px;
-            margin: 30px 0;
-            font-size: 20px;
-            line-height: 2;
+            padding: 30px 20px;
+            margin: 25px 0;
+            font-size: 18px;
+            line-height: 1.8;
             text-align: left;
             white-space: pre-line;
             box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+            word-break: break-word;
         }
-   .action-btns-full {
+.action-btns-full {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             max-width: 600px;
-            margin: 40px auto 0;
+            margin: 30px auto 0;
             flex-wrap: wrap;
         }
-   .action-btns-full button {
+.action-btns-full button {
             flex: 1;
             min-width: 140px;
             padding: 16px;
@@ -246,56 +271,59 @@
             border-radius: 12px;
             cursor: pointer;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 15px;
         }
-   .copy-btn {
+.copy-btn {
             background: #059669;
             color: white;
         }
-   .share-btn {
+.share-btn {
             background: #25D366;
             color: white;
         }
-   .insta-btn {
+.insta-btn {
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
             color: white;
         }
-   .back-btn {
+.back-btn {
             background: linear-gradient(135deg, #ef4444, #dc2626);
             color: white;
         }
-   .back-btn:hover {
+.back-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
         }
-   .stats {
+.stats {
             text-align: center;
             color: #64748b;
             font-size: 11px;
             margin-top: 20px;
         }
-   .footer {
+.footer {
             text-align: center;
             margin-top: 25px;
             color: #64748b;
             font-size: 12px;
             line-height: 1.6;
         }
-   .founder {
+.founder {
             color: #a78bfa;
             font-weight: 700;
             font-size: 13px;
             margin-top: 8px;
         }
         @media (max-width: 600px) {
-        .container { max-width: 100%; padding: 20px; }
-        .mood-big { font-size: 80px; }
-        .mood-text-big { font-size: 28px; }
-        .roast-full { font-size: 16px; padding: 25px 20px; }
-        .action-btns-full { flex-direction: column; }
-        .action-btns-full button { min-width: 100%; }
-        .question-header { flex-direction: column; align-items: flex-start; }
-        .change-btn { margin-left: 0; margin-top: 10px; }
+  .container { max-width: 100%; padding: 20px 15px; }
+  .mood-big { font-size: 70px; }
+  .mood-text-big { font-size: 28px; }
+  .roast-full { font-size: 16px; padding: 25px 15px; }
+  .action-btns-full { flex-direction: column; }
+  .action-btns-full button { min-width: 100%; }
+  .question-header { flex-direction: column; align-items: flex-start; }
+  .change-btn { margin-left: 0; margin-top: 10px; }
+  .option-label { font-size: 16px; }
+  .option-item { padding: 16px 12px; }
+  .question-text { font-size: 17px; }
         }
     </style>
 </head>
@@ -303,7 +331,7 @@
     <div class="input-screen" id="inputScreen">
         <div class="container">
             <div class="header">
-                <span style="font-size: 28px;">💣</span>
+                <span style="font-size: 28px;"></span>
                 <h1>BABAJI JHANDU BOMB v6.3</h1>
             </div>
             <p class="subtitle">Apne us khass dost ki details dalo jiski aaj leni hai.</p>
@@ -314,13 +342,13 @@
             <div id="questionsContainer"></div>
 
             <div class="buttons">
-                <button class="generate" onclick="generateRoast()">Daba Nalle 💣</button>
+                <button class="generate" onclick="generateRoast()">generate roast </button>
                 <button class="reset" onclick="resetQuestions()">Reset</button>
             </div>
 
             <div class="stats" id="stats">50+ Funky MCQs | 500 Mood | Full Heavy Roast Mode</div>
             <div class="footer">
-                Made with 💣 by Jhandu Bomb Team
+                Made with  by Jhandu Bomb Team
                 <div class="founder">Founders: Anand & Serra</div>
             </div>
         </div>
@@ -335,10 +363,10 @@
             <div class="roast-full" id="roastText"></div>
 
             <div class="action-btns-full">
-                <button class="copy-btn" onclick="copyRoast()">📋 Copy Roast</button>
-                <button class="share-btn" onclick="shareWA()">📱 WhatsApp</button>
-                <button class="insta-btn" onclick="shareInsta()">📸 Instagram</button>
-                <button class="back-btn" onclick="goBack()">🏠 Back</button>
+                <button class="copy-btn" onclick="copyRoast()">Copy Roast</button>
+                <button class="share-btn" onclick="shareWA()">WhatsApp</button>
+                <button class="insta-btn" onclick="shareInsta()">Instagram</button>
+                <button class="back-btn" onclick="goBack()">Back</button>
             </div>
         </div>
     </div>
@@ -410,42 +438,53 @@
             }
         ];
 
+        let usedQuestionIndexes = JSON.parse(localStorage.getItem('jhanduUsedQ')) || [];
+        let currentActiveQuestions = [];
+
         const moodData = [
-            {name: "TABAHI", emoji: "💀", desc: "Aaj tu puri duniya tabah karne ke mood mein hai"},
-            {name: "BARBADI", emoji: "☠️", desc: "Tera mission: Har cheez barbaad karna"},
-            {name: "KACHRA", emoji: "💩", desc: "Aaj tu khud ko kachre se bhi ghatiya mehsoos kar raha hai"},
-            {name: "NALAYAK", emoji: "🤡", desc: "Nalayakpanti ki saari hadein paar kar di tune"},
-            {name: "NIKAMMA", emoji: "😴", desc: "Aaj tera man bas sone ka laga raha hai, kaam se nafrat"},
-            {name: "BESHARAM", emoji: "😏", desc: "Sharm naam ki cheez tujhme bachi hi nahi"},
-            {name: "CHIRKUT", emoji: "🤓", desc: "Chirkutpanti mein PhD kar li tune aaj"},
-            {name: "LALLU", emoji: "😵", desc: "Lallu ban ke ghum raha hai, akal ghaas charne gayi"},
-            {name: "PAKAO", emoji: "🥴", desc: "Tu khud pak chuka hai aur duniya ko bhi paka raha"},
-            {name: "FATELA", emoji: "🤯", desc: "Dimaag fatela ho gaya hai tera tension se"},
-            {name: "DHAMAKA", emoji: "💣", desc: "Aaj tu bomb ki tarah fatega kisi pe bhi"},
-            {name: "CHUTIYA", emoji: "🤪", desc: "Chutiyapa ki dukaan khol rakhi hai tune"},
-            {name: "JOKER", emoji: "🃏", desc: "Puri life ka joker ban gaya hai tu"},
-            {name: "BAWASIR", emoji: "😫", desc: "Tu dard hai, bawasir se bhi bura"},
-            {name: "GOBAR", emoji: "🐄", desc: "Gobar dimaag, gobar jaisi harkat"},
-            {name: "LAZY", emoji: "🦥", desc: "Aalsi ki dukaan hai tu"},
-            {name: "CRAZY", emoji: "🤪", desc: "Pagal khane se bhag ke aaya hai kya tu"}
-        ];
-
+            {name: "TABAHI", emoji: "", desc: "Aaj tu puri duniya tabah karne ke mood mein hai"},
+            {name: "BARBADI", emoji: "", desc: "Tera mission: Har cheez barbaad karna"},
+            {name: "KACHRA", emoji: "", desc: "Aaj tu khud ko kachre se bhi ghatiya mehsoos kar raha hai"},
+            {name: "NALAYAK", emoji: "", desc: "Nalayakpanti ki saari hadein paar kar di tune"},
+            {name: "NIKAMMA", emoji: "", desc: "Aaj tera man bas sone ka laga raha hai, kaam se nafrat"},
+            {name: "BESHARAM", emoji: "", desc: "Sharm naam ki cheez tujhme bachi hi nahi"},
+            {name: "CHIRKUT", emoji: "", desc: "Chirkutpanti mein PhD kar li tune aaj"},
+            {name: "LALLU", emoji: "", desc: "Lallu ban ke ghum raha hai, akal ghaas charne gayi"},
+            {name: "PAKAO", emoji: "", desc: "Tu khud pak chuka hai aur duniya ko bhi paka raha"},
+            {name: "FATELA", emoji: "", desc: "Dimaag fatela ho gaya hai tera tension se"},
+            {name: "DHAMAKA", emoji: "", desc: "Aaj tu bomb ki tarah fatega kisi pe bhi"},
+            {name: "CHUTIYA", emoji: "", desc: "Chutiyapa ki dukaan khol rakhi hai tune"},
+            {name: "JOKER", emoji: "", desc: "Puri life ka joker ban gaya hai tu"},
+            {name: "BAWASIR", emoji: "", desc: "Tu dard hai, bawasir se bhi bura"},
+            {name: "GOBAR", emoji: "", desc: "Gobar dimaag, gobar jaisi harkat"},
+            {name: "LAZY", emoji: "", desc: "Aalsi ki dukaan hai tu"},
+            {name: "CRAZY", emoji: "", desc: "Pagal khane se bhag ke aaya hai kya tu"}
+            
+];
         const roastTemplates = [
-            `Abe {name}, tera Jhandu Score {score} aaya hai.\nMATLAB {mood} MODE ON HO GAYA 💣\n\nPehla kaand: Teri sabse ghatiya aadat hai ki tu "{q1}".\nDusra kaand: Ghar pe teri izzat lagatar "{q2}" ki wajah se mitti me mili hui hai.\nTeesra kaand: Aur toh aur tera dimaag kharab hai jab tu "{q3}" karta hai.\n\nTeeno ka total jod ke = Tu Jhandu Bomb ka BETA nahi, BAAP nikla re.\nTere baap ka photo dekh ke padosi bhi bolte honge "Ye paap kiska hai bhai".\nBhagwan bhi upar se sochta hoga "Isko dharti pe kyu bheja, narak mein jagah kam pad gayi kya".\nSharm kar le thodi, ya phir doob mar kahin jaake.`,
+            `Abe {name}, tera Jhandu Score {score} aaya hai.\nMATLAB {mood} MODE ON HO GAYA \n\nPehla kaand: Teri sabse ghatiya aadat hai ki tu "{q1}".\nDusra kaand: Ghar pe teri izzat lagatar "{q2}" ki wajah se mitti me mili hui hai.\nTeesra kaand: Aur toh aur tera dimaag kharab hai jab tu "{q3}" karta hai.\n\nTeeno ka total jod ke = Tu Jhandu Bomb ka BETA nahi, BAAP nikla re.\nTere baap ka photo dekh ke padosi bhi bolte honge "Ye paap kiska hai bhai".\nBhagwan bhi upar se sochta hoga "Isko dharti pe kyu bheja, narak mein jagah kam pad gayi kya".\nSharm kar le thodi, ya phir doob mar kahin jaake.`,
 
-            `Sun be {name}, Score {score} dekh ke Jhandu Bomb bhi phat gayi.\n{mood} MODE ACTIVATED ⚠️\n\nTeri Report Card:\nStatus 1: "{q1}" - Itni vailagiri? Ambani ka beta hai kya jo itna time waste kar raha hai?\nStatus 2: "{q2}" - Bhai tere ghar wale tujhe jhaadu se kyu nahi maarte?\nStatus 3: "{q3}" - Yeh harkat dekh kar toh Yamraj bhi resign kar de.\n\nOverall Result: FAIL + BEIZZAT + NALAYAK = {mood}\nBhai tu Oxygen barbaad kar raha hai dharti ki, ped-paudo se maafi maang.\nRishtedaar shaadi mein nahi bulate, darte hain khana barbaad karega.`,
+            `Sun be {name}, Score {score} dekh ke Jhandu Bomb bhi phat gayi.\n{mood} MODE ACTIVATED \n\nTeri Report Card:\nStatus 1: "{q1}" - Itni vailagiri? Ambani ka beta hai kya jo itna time waste kar raha hai?\nStatus 2: "{q2}" - Bhai tere ghar wale tujhe jhaadu se kyu nahi maarte?\nStatus 3: "{q3}" - Yeh harkat dekh kar toh Yamraj bhi resign kar de.\n\nOverall Result: FAIL + BEIZZAT + NALAYAK = {mood}\nBhai tu Oxygen barbaad kar raha hai dharti ki, ped-paudo se maafi maang.\nRishtedaar shaadi mein nahi bulate, darte hain khana barbaad karega.`,
 
             `{name} bhai, {score} Score = {mood} Level Unlock Hua.\n\nTeri kundali check ki maine:\nShani: "{q1}" karke tu usko bhi pareshan kar diya.\nRahu-Ketu: Tera "{q2}" wala dramebaaz roop dekh ke dono bhaag gaye dar ke.\nBrihaspati: Jabse tune "{q3}" kiya hai, woh apna dimaag check karwane gaya hai.\n\nMATLAB poora Navgraha tere se tang aa gaya hai.\nNASA wale tujhe dharti se bahar fekne ka rocket bana rahe hain.\nElon Musk ne tweet kiya "Isse Mars pe bhi nahi le ja sakte, wahan ka mahool kharab ho jayega".\nSudhar ja warna agla janam gutter ke keede ka milega, confirm.`,
 
-            `Oye {name}! Score {score} = {mood} MODE 💀\n\nSystem Analysis Report:\nKaand 1: {q1} = OUT OF CONTROL, Dimaag Hang!\nKaand 2: {q2} = Pure mohalle me thoo-thoo.\nKaand 3: {q3} = Yeh toh ghor paap hai be.\n\nConclusion: Tu Insaan nahi, Virus hai society ke liye - JHANDU VIRUS.\nAntivirus bhi tujhe scan karke bolta "Bhai rehne de, main khud uninstall ho jata hun, izzat bach jaaye".\nBill Gates tera naam sunke Windows ka naya version launch karega - "Windows Bewakoof Edition - Specially for {name}".\nBas kar bhai, dharti maa bhi tujhse tang aa gayi hai, bolti "Isko wapas le lo upar".`
+            `Oye {name}! Score {score} = {mood} MODE \n\nSystem Analysis Report:\nKaand 1: {q1} = OUT OF CONTROL, Dimaag Hang!\nKaand 2: {q2} = Pure mohalle me thoo-thoo.\nKaand 3: {q3} = Yeh toh ghor paap hai be.\n\nConclusion: Tu Insaan nahi, Virus hai society ke liye - JHANDU VIRUS.\nAntivirus bhi tujhe scan karke bolta "Bhai rehne de, main khud uninstall ho jata hun, izzat bach jaaye".\nBill Gates tera naam sunke Windows ka naya version launch karega - "Windows Bewakoof Edition - Specially for {name}".\nBas kar bhai, dharti maa bhi tujhse tang aa gayi hai, bolti "Isko wapas le lo upar".`
         ];
 
-        let currentActiveQuestions = [];
-
         function getRandomQuestion(excludeIndexes) {
-            let availableIndexes = mcqBank.map((_, i) => i).filter(i =>!excludeIndexes.includes(i));
-            if (availableIndexes.length === 0) availableIndexes = mcqBank.map((_, i) => i);
+            let notAvailable = [...usedQuestionIndexes,...excludeIndexes];
+            let availableIndexes = mcqBank.map((_, i) => i).filter(i =>!notAvailable.includes(i));
+
+            if (availableIndexes.length === 0) {
+                usedQuestionIndexes = [];
+                localStorage.setItem('jhanduUsedQ', JSON.stringify(usedQuestionIndexes));
+                availableIndexes = mcqBank.map((_, i) => i).filter(i =>!excludeIndexes.includes(i));
+            }
+
             const randomIndex = availableIndexes[Math.floor(Math.random() * availableIndexes.length)];
+            usedQuestionIndexes.push(randomIndex);
+            localStorage.setItem('jhanduUsedQ', JSON.stringify(usedQuestionIndexes));
+
             return { question: mcqBank[randomIndex], index: randomIndex };
         }
 
@@ -462,9 +501,8 @@
 
         function changeQuestion(qIndex) {
             const currentIndexes = currentActiveQuestions.map(q => mcqBank.indexOf(q));
-            const otherIndexes = currentIndexes.filter((_, i) => i!== qIndex);
-            let { question, index } = getRandomQuestion(otherIndexes);
-
+            const excludeThese = currentIndexes.filter((_, i) => i!== qIndex);
+            let { question, index } = getRandomQuestion(excludeThese);
             currentActiveQuestions[qIndex] = question;
             renderSingleQuestion(qIndex);
         }
@@ -476,24 +514,39 @@
             let optionsHtml = '';
             qObj.options.forEach((opt, optIndex) => {
                 optionsHtml += `
-                    <div class="option-item" onclick="document.getElementById('q_${qIndex}_o_${optIndex}').checked = true">
+                    <div class="option-item" onclick="selectOption(${qIndex}, ${optIndex})">
                         <input type="radio" name="question_${qIndex}" id="q_${qIndex}_o_${optIndex}" value="${opt.val}" data-text="${opt.text}">
                         <label class="option-label" for="q_${qIndex}_o_${optIndex}">${opt.text}</label>
                     </div>
                 `;
             });
 
+            optionsHtml += `
+                <div class="option-item" onclick="selectOption(${qIndex}, 4)">
+                    <input type="radio" name="question_${qIndex}" id="q_${qIndex}_o_4" value="30" data-text="custom">
+                    <label class="option-label" for="q_${qIndex}_o_4">Kuch aur hi kaand karta hai - Khud likh</label>
+                </div>
+                <input type="text" class="custom-input-box" id="custom_${qIndex}" placeholder="Yahan apna kaand likh... e.g., Din bhar so ke sapne me CEO banta hai" maxlength="100">
+            `;
+
             container.innerHTML = `
                 <div class="mcq-container">
                     <div class="question-header">
                         <div class="question-text">Sawaal ${qIndex + 1}: ${qObj.q}</div>
-                        <button class="change-btn" onclick="changeQuestion(${qIndex})">🔄 Change</button>
+                        <button class="change-btn" onclick="changeQuestion(${qIndex})"> Change</button>
                     </div>
                     <div class="options-list">
                         ${optionsHtml}
                     </div>
                 </div>
             `;
+        }
+
+        function selectOption(qIndex, optIndex) {
+            document.getElementById(`q_${qIndex}_o_${optIndex}`).checked = true;
+            if(optIndex === 4) {
+                setTimeout(() => document.getElementById(`custom_${qIndex}`).focus(), 100);
+            }
         }
 
         function renderQuestions() {
@@ -509,6 +562,8 @@
 
         function resetQuestions() {
             document.getElementById("name").value = "";
+            usedQuestionIndexes = [];
+            localStorage.setItem('jhanduUsedQ', JSON.stringify(usedQuestionIndexes));
             renderQuestions();
         }
 
@@ -524,8 +579,19 @@
                     alert(`Oye! Sawaal no. ${i+1} ka option select kaun tera baap karega? Saare select karo!`);
                     return;
                 }
+
+                let answerText = selectedRadio.getAttribute('data-text');
+                if(answerText === "custom") {
+                    const customVal = document.getElementById(`custom_${i}`).value.trim();
+                    if(!customVal) {
+                        alert(`Sawaal no. ${i+1} me "Khud likh" select kiya hai to kuch likh bhi de nalle!`);
+                        return;
+                    }
+                    answerText = customVal;
+                }
+
                 scores.push(parseInt(selectedRadio.value));
-                chosenTexts.push(selectedRadio.getAttribute('data-text'));
+                chosenTexts.push(answerText);
             }
 
             const score = scores[0] + scores[1] + scores[2];
@@ -537,11 +603,11 @@
             let roast = roastTemplates[templateIndex];
 
             roast = roast.replace(/{name}/g, name)
-                      .replace(/{score}/g, score)
-                      .replace(/{mood}/g, mood.name)
-                      .replace(/{q1}/g, chosenTexts[0])
-                      .replace(/{q2}/g, chosenTexts[1])
-                      .replace(/{q3}/g, chosenTexts[2]);
+               .replace(/{score}/g, score)
+               .replace(/{mood}/g, mood.name)
+               .replace(/{q1}/g, chosenTexts[0])
+               .replace(/{q2}/g, chosenTexts[1])
+               .replace(/{q3}/g, chosenTexts[2]);
 
             document.getElementById("moodEmoji").innerText = mood.emoji;
             document.getElementById("moodText").innerText = mood.name;
@@ -556,26 +622,26 @@
         function goBack() {
             document.getElementById("resultScreen").style.display = "none";
             document.getElementById("inputScreen").style.display = "flex";
-            resetQuestions();
+            renderQuestions();
         }
 
         function copyRoast() {
             const text = document.getElementById("roastText").innerText;
             navigator.clipboard.writeText(text).then(() => {
-                alert("Roast copy ho gaya! Ab dosto ki lene ke liye taiyar ho jao. 🔥");
+                alert("Roast copy ho gaya! Ab dosto ki lene ke liye taiyar ho jao.");
             });
         }
 
         function shareWA() {
             const text = document.getElementById("roastText").innerText;
-            const url = "https://api.whatsapp.com/send?text=" + encodeURIComponent(text + "\n\n🔥 Tu bhi bana Jhandu Bomb: " + window.location.href);
+            const url = "https://api.whatsapp.com/send?text=" + encodeURIComponent(text + "\n\nTu bhi bana Jhandu Bomb: " + window.location.href);
             window.open(url, '_blank');
         }
 
         function shareInsta() {
             const text = document.getElementById("roastText").innerText;
-            navigator.clipboard.writeText(text + "\n\n🔥 Jhandu Bomb: " + window.location.href).then(() => {
-                alert("Roast + Link copy ho gaya! 📸\n\nInstagram khol aur Story/Post me paste kar de.\nNalle dost tag karna mat bhoolna 😂💣");
+            navigator.clipboard.writeText(text + "\n\nJhandu Bomb: " + window.location.href).then(() => {
+                alert("Roast + Link copy ho gaya!\n\nInstagram khol aur Story/Post me paste kar de.\nNalle dost tag karna mat bhoolna");
             });
         }
 
